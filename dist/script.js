@@ -28,7 +28,6 @@ function addBtnClick(event) {
         newTask.value = "";
         newTask.focus();
     }
-
 }
 
 function addTask(input) {
