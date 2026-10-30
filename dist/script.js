@@ -24,7 +24,6 @@ function addBtnClick(event) {
         newTask.focus();
     }
     else {
-        console.log(newTask.value);
         addTask(newTask.value);
         newTask.value = "";
         newTask.focus();
@@ -37,5 +36,12 @@ function addTask(input) {
     li.innerHTML= `<span class="task-text">${input}</span><button class="done-btn">&#10006;</button>`;
     let ol = document.querySelector("ol");
     ol.appendChild(li);
+    let doneBtn = li.querySelector(".done-btn");
+    doneBtn.addEventListener("click", removeTask)
+}
+
+function removeTask(event) {
+    let removeLi = event.target.parentNode;
+    removeLi.parentNode.removeChild(removeLi);
 }
 

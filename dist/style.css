@@ -3,6 +3,6 @@ h1{
 }
 
 #textbox {
-  display:inline;
+  display: inline-block;
 }
 
